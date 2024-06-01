@@ -8,6 +8,12 @@ h1 {
     font-family: 'Poppins', sans-serif;
 }
 
+input[type="image"] {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+}
+
 button {
     position: fixed;
     width: 100px;
@@ -16,10 +22,24 @@ button {
 
 #b1 {
     top: 100px;
-    left: 100px
+    left: 100px;
+
+    animation-name: spin;
+    animation-duration: 4000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;    
 }
 
 #b2 {
     top: 100px;
     left: 250px
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(360deg);
+    }
 }
